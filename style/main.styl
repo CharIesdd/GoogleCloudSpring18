@@ -203,6 +203,34 @@ body
     opacity .3
     cursor wait
 
+#wardrobe-button
+  position fixed
+  width 19vmin !important
+  height 19vmin !important
+  border-radius 50%
+  background-color #fff
+  border 1px solid #fff
+  padding 1.5vmin
+  background-clip content-box
+  bottom 15vmin
+  left 90% !important
+  opacity .8
+  transform translateX(-50%)
+  cursor pointer
+  transition opacity .2s
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  -webkit-tap-highlight-color transparent
+  outline 0
+
+  &:active
+    opacity 1
+
+  &:hover
+    opacity .6
+
+  &.busy
+    opacity .3
+    cursor wait
 
 .debug
   user-select none
@@ -240,6 +268,14 @@ body
 
 
   #shutter-button
+    width 100px !important
+    height 100px !important
+    padding 10px !important
+    width 10vmin !important
+    height 10vmin !important
+    bottom 10vmin !important
+
+  #wardrobe-button
     width 100px !important
     height 100px !important
     padding 10px !important

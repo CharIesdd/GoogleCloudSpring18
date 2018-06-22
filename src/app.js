@@ -28,7 +28,8 @@ app.model({
     activeLang:  langList[0],
     targetLang:  'english',
     guesses:     '',
-    rotateTerms: true
+    rotateTerms: true,
+    isWardrobeOpen: false
   },
   subscriptions: [
     (send, done) => document.addEventListener('DOMContentLoaded', _ => send('requestCamera', done))
@@ -53,7 +54,8 @@ app.model({
       video,
       ctx,
       canvas
-    })
+    }),
+    toggleWardrobe: (_, isOpen) => ({isWardrobeOpen:isOpen})
   },
   effects: {
     requestCamera,

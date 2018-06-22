@@ -37,6 +37,16 @@ export default (state, prev, send) =>
         : null
       }
       ${
+        state.cameraReady
+        ? html`
+          <div
+            id="wardrobe-button"
+            onclick=${_ => send('toggleWardrobe', !state.isWardrobeOpen)}>
+          </div>
+        `
+        : null
+      }
+      ${
         state.firstTime && state.cameraReady
         ? html`<h5 id="first-time">Try taking a picture of something.</h5>`
         : null
